@@ -14,7 +14,7 @@ with open("Day2\\input", "r", encoding="utf-8") as inputfile:
             cubes = hand.strip().split(",")
             for cube in cubes:
                 number, cubetype = cube.strip().split(" ")
-                if int(number)>= cubetypes[cubetype]:
-                    cubetypes[cubetype]=max(int(number), cubetypes[cubetype])
-        sumgames+=(cubetypes["red"]*cubetypes["green"]*cubetypes['blue'])
+                if int(number) >= cubetypes[cubetype]:
+                    cubetypes[cubetype] = max(int(number), cubetypes[cubetype])
+        sumgames += cubetypes["red"] * cubetypes["green"] * cubetypes["blue"]
     print(sumgames)
