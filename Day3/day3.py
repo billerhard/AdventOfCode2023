@@ -8,7 +8,7 @@ def check_for_symbols(lines, line_number, span):
     check for symbols near line_number,span in lines
     '''
     line_range=range(max(line_number-1,0),min(line_number+2,140))
-    span_range=range(max(span[0]-1,0),min(span[1]+1,140))
+    span_range=range(max(span[0]-1,0),min(span[1]+2,140))
     for i in line_range:
         for j in span_range:
             if re.search(r"[^\d\.\n]",lines[i][j]):
